@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">    
+    <meta name="author" content="Innoweb - Peterson F.">
+    <title>Formulario</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/jumbotron.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+<h1 class="formuh1">Enviar Curriculum</h1>
+<!--la propiedad enctype permite el envío de archivos adjuntos en el formulario. -->    
+<form id="form1" class="well col-lg-12" action="enviar.php" method="post" name="form1" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Rut*</label> <input id="Rut" class="form-control" type="text" name="Rut" /> 
+            <label>Nombre*</label> <input id="Nombre" class="form-control" type="text" name="Nombre" /> 
+            <label>Apellido Paterno*</label> <input id="Paterno" class="form-control" type="text" name="Paterno" /> 
+            <label>Apellido Materno*</label> <input id="Materno" class="form-control" type="text" name="Materno" /> 
+            <label>Email*</label> <input id="Email" class="form-control" type="email" name="Email" />
+        </div>
+        <div class="col-lg-6">
+            <label>Cargo*</label>
+            <select id="Cargo" name="Cargo" class="form-control">
+                <option value="1">Supervisor Eléctrico</option>
+                <option value="2">Eléctrico Primera</option>
+                <option value="2">Eléctrico Segunda</option>
+                <option value="4">Supervisor Obras Civiles</option>
+                <option value="5">Operador Camión Pluma</option>
+                <option value="6">Supervisor Montaje Piping</option>
+                <option value="7">Supervisor Eléctrico Instrumentista</option>
+                <option value="8">Asistente Técnico Planificador</option>
+                <option value="9">Supervisor Mecánico</option>
+                <option value="10">Mecánico Primera</option>
+                <option value="11">Mecánico Segunda</option>
+                <option value="12">Administrador de Contrato</option>
+                <option value="13">Administrador de Proyecto</option>
+                <option value="14">Jefe de Proyecto</option>
+            </select>
+
+        <label>Mensaje*</label><textarea id="Mensaje" class="form-control" name="Mensaje" rows="11"></textarea>
+        </div>
+
+        <div class="col-lg-6">
+            <label for="exampleInputFile">Adjuntar CV en formato .PDF</label>
+            <input type="file" name="Archivo" id="Archivo" accept="application/pdf" class="form-control">
+        </div>
+        <div class="col-lg-6">
+            <br>
+            <button class="btn btn-default btn-block" type="submit">Enviar</button>
+        </div>
+        
+    </div>
+</form>
+</div>
+
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>
