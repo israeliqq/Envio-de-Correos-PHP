@@ -13,7 +13,7 @@ $Rut     = $_POST['Rut'];
 $Nombre  = $_POST['Nombre'];
 $Paterno = $_POST['Paterno'];
 $Materno = $_POST['Materno'];
-$Cargo   = $_POST['Cargo'];
+$CodCargo= $_POST['Cargo'];
 $Email   = $_POST['Email'];
 $Mensaje = $_POST['Mensaje'];
 $Archivo = $_FILES['Archivo'];
@@ -54,15 +54,23 @@ $mail->AddAttachment($Archivo['tmp_name'], $Archivo['name']);
 // Datos del servidor SMTP (salida)
 
 $mail->IsSMTP(); 
-$mail->Host     = "ssl://smtp.gmail.com:465";  // Servidor de Salida.
+$mail->Host     = "mail.eminor.cl";  // Servidor de Salida.
 $mail->SMTPAuth = true;  //Autentificación SSL
-$mail->Username = "israelteran.iquique@gmail.com";  // Correo Electrónico
-$mail->Password = ""; // Contraseña
+$mail->Username = "info@eminor.cl";  // Correo Electrónico
+$mail->Password = "eminor$1928"; // Contraseña
 
 // Control de Envio final del correo
 
 if ($mail->Send()) echo "correo enviado exitosamente";
 else echo "error al enviar correo: ".$mail->ErrorInfo;
+
+
+
+//INSERT BD
+
+require("db.php");
+insert($Rut,$Nombre,$Paterno,$Materno,$CodCargo);
+
 
 ?>
 </body>
