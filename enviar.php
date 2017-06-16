@@ -21,7 +21,7 @@ $Archivo = $_FILES['Archivo'];
 
 
 $tipo = $_FILES['Archivo']['type'];
-if($tipo  == "application/pdf"){
+if($tipo  != "application/pdf"){
 	echo 'Archivo debe ser en formato PDF';
     exit;
 }
