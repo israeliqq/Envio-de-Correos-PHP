@@ -57,7 +57,7 @@ $mail->IsSMTP();
 $mail->Host     = "ssl://smtp.gmail.com:465";  // Servidor de Salida.
 $mail->SMTPAuth = true;  //Autentificación SSL
 $mail->Username = "israelteran.iquique@gmail.com";  // Correo Electrónico
-$mail->Password = "minino42"; // Contraseña
+$mail->Password = ""; // Contraseña
 
 // Control de Envio final del correo
 
