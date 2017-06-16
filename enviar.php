@@ -19,6 +19,13 @@ $Mensaje = $_POST['Mensaje'];
 $Archivo = $_FILES['Archivo'];
 
 
+
+$tipo = $_FILES['Archivo']['type'];
+if($tipo  == "application/pdf"){
+	echo 'Archivo debe ser en formato PDF';
+    exit;
+}
+
 //Llamada a la libreria PHPMAILER
 
 require("lib/class.phpmailer.php");
