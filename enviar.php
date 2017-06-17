@@ -33,7 +33,7 @@ $mail = new PHPMailer();
 
 $mail->From     = $Email;
 $mail->FromName = $Nombre." ".$Paterno." ".$Materno; 
-$mail->AddAddress("israeliqq@live.cl"); // Dirección a la que llegaran los mensajes.
+$mail->AddAddress("info@eminor.cl"); // Dirección a la que llegaran los mensajes.
 
 // Aquí van los datos que apareceran en el correo que reciba
 
@@ -43,7 +43,7 @@ $mail->CharSet = 'UTF-8'; //codificación latina
 
 //Aqui va el Asunto del Correo
 
-$mail->Subject  =  "||| Envio CV |||".$Nombre." ".$Paterno; 
+$mail->Subject  =  "||| Envio CV Postulación ||| ".$Nombre." ".$Paterno; 
 
 //Aqui va el Mensaje del Correo
 
