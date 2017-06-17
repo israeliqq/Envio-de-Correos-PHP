@@ -43,7 +43,7 @@ $mail->CharSet = 'UTF-8'; //codificación latina
 
 //Aqui va el Asunto del Correo
 
-$mail->Subject  =  "||| Envio CV |||"; 
+$mail->Subject  =  "||| Envio CV |||".$Nombre." ".$Paterno; 
 
 //Aqui va el Mensaje del Correo
 
@@ -64,7 +64,7 @@ $mail->IsSMTP();
 $mail->Host     = "mail.eminor.cl";  // Servidor de Salida.
 $mail->SMTPAuth = true;  //Autentificación SSL
 $mail->Username = "info@eminor.cl";  // Correo Electrónico
-$mail->Password = "eminor$1928"; // Contraseña
+$mail->Password = "eminor$1364"; // Contraseña
 
 // Control de Envio final del correo
 
@@ -75,8 +75,8 @@ else echo "error al enviar correo: ".$mail->ErrorInfo;
 
 //INSERT BD
 
-require("db.php");
-insert($Rut,$Nombre,$Paterno,$Materno,$CodCargo);
+//require("db.php");
+//insert($Rut,$Nombre,$Paterno,$Materno,$CodCargo);
 
 
 ?>
